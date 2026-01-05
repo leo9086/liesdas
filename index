@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Für dich</title>
+
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --pink: #ff2f92;
+      --pink-soft: rgba(255, 47, 146, 0.4);
+      --text: #f5f5f5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 500px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 40px;
+      line-height: 1.4;
+    }
+
+    .link-button {
+      display: inline-block;
+      padding: 18px 36px;
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--bg);
+      background: linear-gradient(135deg, var(--pink), #ff5fb1);
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 0 0 var(--pink-soft);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .link-button::after {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--pink), transparent);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.3s ease;
+    }
+
+    .link-button:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 15px 40px var(--pink-soft);
+    }
+
+    .link-button:hover::after {
+      opacity: 0.6;
+    }
+
+    .hint {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>
+      Klick auf den Link,<br>
+      wenn du mir zuhören willst.
+    </h1>
+
+    <!-- 🔗 HIER DEIN WORD-LINK -->
+    <a
+      class="link-button"
+      href="HIER_DEIN_DOCX_LINK_EINFÜGEN"
+      target="_blank"
+    >
+      Öffnen
+    </a>
+
+    <div class="hint">
+      Nur für dich.
+    </div>
+  </div>
+
+</body>
+</html>
