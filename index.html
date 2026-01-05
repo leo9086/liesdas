@@ -9,15 +9,15 @@
     :root {
       --bg: #0b0b0b;
       --pink: #ff2f92;
-      --pink-soft: rgba(255, 47, 146, 0.4);
-      --text: #f5f5f5;
+      --text: #f2f2f2;
+      --soft: rgba(255, 47, 146, 0.35);
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     }
 
     body {
@@ -30,92 +30,129 @@
     }
 
     .container {
+      max-width: 600px;
+      padding: 40px 24px;
       text-align: center;
-      padding: 40px 20px;
-      max-width: 500px;
-      animation: fadeIn 1.2s ease;
+      animation: fadeIn 1s ease;
     }
 
     h1 {
-      font-size: 2rem;
       font-weight: 500;
-      margin-bottom: 40px;
+      font-size: 1.9rem;
       line-height: 1.4;
+      margin-bottom: 40px;
     }
 
-    .link-button {
+    .button {
       display: inline-block;
-      padding: 18px 36px;
+      padding: 18px 38px;
       border-radius: 14px;
-      text-decoration: none;
-      color: var(--bg);
       background: linear-gradient(135deg, var(--pink), #ff5fb1);
-      font-size: 1.1rem;
+      color: var(--bg);
       font-weight: 600;
-      box-shadow: 0 0 0 var(--pink-soft);
+      text-decoration: none;
+      cursor: pointer;
       transition: all 0.3s ease;
-      position: relative;
+      box-shadow: 0 0 0 var(--soft);
     }
 
-    .link-button::after {
-      content: "";
-      position: absolute;
-      inset: -2px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, var(--pink), transparent);
-      opacity: 0;
-      z-index: -1;
-      transition: opacity 0.3s ease;
-    }
-
-    .link-button:hover {
+    .button:hover {
       transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 15px 40px var(--pink-soft);
+      box-shadow: 0 18px 40px var(--soft);
     }
 
-    .link-button:hover::after {
-      opacity: 0.6;
+    .text {
+      display: none;
+      text-align: left;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      white-space: pre-line;
+      animation: fadeIn 1s ease;
     }
 
-    .hint {
-      margin-top: 25px;
-      font-size: 0.9rem;
-      opacity: 0.6;
+    .thankyou {
+      margin-top: 40px;
+      text-align: center;
+      font-weight: 500;
+      color: var(--pink);
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 0.6s;
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h1>
-      Klick auf den Link,<br>
-      wenn du mir zuhören willst.
-    </h1>
 
-    <!-- 🔗 HIER DEIN WORD-LINK -->
-    <a
-      class="link-button"
-      href="https://raw.githubusercontent.com/leo9086/liesdas/main/wichtig.docx"
-      target="_blank"
-    >
-      Öffnen
-    </a>
-
-    <div class="hint">
-      Nur für dich.
+    <div id="intro">
+      <h1>Klick auf den Button,<br>wenn du mir zuhören willst.</h1>
+      <div class="button" onclick="showText()">Öffnen</div>
     </div>
+
+    <!-- 🩷 HIER DEIN TEXT -->
+    <div id="message" class="text">
+Ich weiß gar nicht wie ich das anfangen soll. Ich fühle sovieles aber auch gleichzeitig fühle ich mir immer leerer. 
+Ich habe ständig diese gedanken von uns von dir. Wie wir am anfang waren wie bedingslos wir uns einfach geliebt haben. 
+Ich habe mich gezeigt wie ich eigentlich war, ohne angst, ohne anspannung und ohne hintergedanken. 
+Ich war einfach ich weil ich mich geliebt gefühlt habe und bei dir war das auch so. Ich hab gemerkt wie du warst wie wohl du dich gefühlt hast wie sehr du mich geliebt hast. 
+
+Aber mit der Zeit wurde dieses ich von mir kleiner und kleiner. Ich habe mich immer mehr und mehr angepasst. 
+Habe getan was du gesagt hast weil ich sonst das gefühl hatte du würdest mich nicht mehr lieben aber auch weil ich keine konflikte wollte. 
+Allerdings hat es das nur verschlimmert. Ich habe die dinge nicht richtig gemacht die dinge die du mir gesagt hast nicht richtig verstanden und angenommen. 
+Mit der Zeit kam einfach dieser Modus dieses Autopilot sein. Ich war zwar da aber ich habe nicht angenommen es war schwer.
+Als würde mein ich nicht mehr da sein sondern nur ein Leo den du dir wünschst der alles bejat und sich bei allen nach dir richtet nur um geliebt zu werden.
+Ich denke das war einfach eine weise wie ich wieder diese Liebe und zuneigung nach der ich mich sehen von dir bekomme habe, indem ich mich einfach angepasst habe den durch deine Zustimmung habe ich ein gutes gefühl zumindest vorübergehend bekommen.
+
+Ich vermisse mein altes Ich. Aber ich merke auch wie es noch da ist, wenn ich mit mein Freunden bin. Da kann ich Ich sein.
+Ohne Kompromisse ohne irgendwelche hintergedanken. Deswegen denke ich das ich mich noch nicht ganz verloren habe, zumindest hoffe ich das.
+Paula, ich will dir nichts böses nie wollte ich das. Ich verstehe deine Last die du letzten Jahre mit mir getragen hast wirklich. 
+Ich habe diesen Text geschrieben damit du dich vielleicht besser in mich rein versetzten kannst. Nicht nur du Trägst schuld, ich habe auch meine Probleme.
+Ich habe einfach das Gefühl das du nicht zu 100 Prozent diese verstehst. Ich will mich bessern, für mich aber auch für uns wenn es das noch geben sollte.
+
+Vielleicht hat es ein Ende ja, vielleicht ist es so gewollt das wir uns jetzt trennen. 
+Ich habe schon schlechte zeichen dieses Jahr bekommen, mein Monitor ist kaputt gegangen, Die beerdigung meiner geliebten Oma ist morgen und ich habe das gefühl ich werde dinge verlieren dieses Jahr die mir wichtig sind.
+Ich will es nicht, ich merke die letzten tage wie alleine ich mich fühle alleine zu leben in der wohnung. Ich male mir aus wie es wäre wenn ich alles hier in berlin weg schmeiße und mit dir in Halle zusammenziehe. 
+
+Das ich einfach irgendwas in mein Leben in die Hand nehme. 
+Ich habe nichts zu verlieren außer zwei drei freunde meine Eltern und meinen Job, den ich aber wieder schnell in Halle oder Leipzig finden kann.
+Ich will mich wieder lebendig fühlen, ich will sachen erleben ich will einfach mehr tun in mein Leben. 
+Und wenn ich dir ganz ehrlich bin habe ich mir wie ein Zweites leben bereits in Halle und mit dir aufgebaut.
+Paula, Dustin, Daniel, deine Oma und Opa, Cismo. Es ist als würde ich zwei Leben führen wobei das in Berlin mich auf dauer einfach kaputt gemacht. Weil ich jedes mal das gleiche tue.
+
+Ich hab so ein warmes gefühl jedes mal wenn ich bei dir zuhause bin, alles ist ordentlich alles ist so schön eingerichtet, es riecht immer ganz bestimmt nach dir. 
+Vielleicht sollte ich einfach dieses Risiko einmal in mein Leben eingehen und nach Halle ziehen und mich überraschen lassen was Leben bringt. 
+
+Ich weiß es nicht, ich will einfach ich sein und sachen tun mit den ich mich wieder gut fühle. 
+Meine hobbys wie Zeichnen, Basketball, Schach, Videospiele und gute Animes oder Serien schauen oder ein Buch oder Manga mal durchlesen.
+Ich will dich Lieben, ich will es wirklich, ich will eine Zukunft mit dir in einer schönen Wohnung egal wo. 
+Ein schönes Leben mit ein Hund und vielleicht einer Echse. Zwei Autos und einfach Ruhe in unser Leben indem wir Tun können was wir wollen.
+
+Ich wollte, dass du das in Ruhe lesen kannst.
+Ohne Druck.
+Ohne Diskussion.
+
+❤️
+    </div>
+
+    <div id="thanks" class="thankyou">
+      Danke, dass du zugehört hast.
+    </div>
+
   </div>
+
+  <script>
+    function showText() {
+      document.getElementById("intro").style.display = "none";
+      document.getElementById("message").style.display = "block";
+      document.getElementById("thanks").style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
